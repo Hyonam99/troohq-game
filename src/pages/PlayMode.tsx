@@ -39,7 +39,7 @@ const PlayMode = () => {
 								Take part in challenges with friends or other
 								players
 							</p>
-							<button className="bg-primary text-white px-6 py-2 rounded-xl hover:bg-opacity-90 transition-all duration-200 w-fit">
+							<button className="btn-primary">
 								Find Friends
 							</button>
 						</div>

@@ -1,50 +1,57 @@
-# React + TypeScript + Vite
+# TrooHQ - KICK
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Table of Contents
 
-Currently, two official plugins are available:
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Deployment](#deployment)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
 
-## Expanding the ESLint configuration
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Framework**: [React.js](https://reactjs.org/)
+- **Routing**: [React-router](https://reactrouter.com/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Other technologies used**:
+	[React-icons](https://react-icons.github.io/react-icons/)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+## Installation
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+To get a local copy up and running follow these simple steps.
+
+1. Clone the repo
+```bash
+# clone with https (preferred)
+git clone https://github.com/Hyonam99/troohq-game.git
+
+# or clone with ssh
+git clone git@github.com:Hyonam99/troohq-game.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+2. Navigate to the project directory
+```bash
+cd troohq-game
 ```
+
+3. Install the required dependencies
+```bash
+pnpm install
+```
+
+4. Run the application
+```bash
+pnpm run dev
+# application opens up on http://localhost:5034/
+```
+
+
+## Deployment
+- this web app is hosted on vercel
+- live webapp URL: [troohq-app](https://troohq-game.vercel.app/)
+- play mode path URL: [troohq-app-playmode](https://troohq-game.vercel.app/play-mode)
+
+
+Thank you for taking time to explore this project! I hope you find the details useful. If you have any questions, suggestions, or feedback, please don't hesitate to reach out.
+
+Cheers!

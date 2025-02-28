@@ -46,7 +46,7 @@
 
 @layer base {
 	.btn-primary {
-		@apply bg-primary text-white px-6 py-3 rounded-2xl font-semibold hover:brightness-90 cursor-pointer;
+		@apply bg-primary text-white px-6 py-2 rounded-xl font-semibold hover:bg-primary/90 transition-all duration-200 cursor-pointer;
 	}
 
     .active-nav {
