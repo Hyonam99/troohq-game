@@ -1,8 +1,48 @@
+/*add additional fallback fonts similar to Avenir LT Std*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&family=Poppins:wght@300;400;700&display=swap');
+
 @import "tailwindcss";
 
 @config "../tailwind.config.js";
 
 @tailwind utilities;
+
+/* define font type face for Avenir LT Std*/
+@font-face {
+  font-family: 'Avenir LT Std';
+  src: url('/fonts/AvenirLTStd35Light300.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir LT Std';
+  src: url('/fonts/AvenirLTStd45Book400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir LT Std';
+  src: url('/fonts/AvenirLTStd65Medium500.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir LT Std';
+  src: url('/fonts/AvenirLTStd85Heavy700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir LT Std';
+  src: url('/fonts/AvenirLTStd95Black900.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}
+
 
 @layer base {
 	.btn-primary {
@@ -20,7 +60,7 @@
 }
 
 :root {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Avenir LT Std', 'Nunito', 'Poppins', sans-serif;
   line-height: 1.5;
   font-weight: 400;
   background: #060D1F;
@@ -33,5 +73,5 @@
 }
 
 .hide-scroll {
-    scrollbar-width:none;
+    scrollbar-width: none;
 }

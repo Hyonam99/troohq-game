@@ -27,13 +27,13 @@ const PlayMode = () => {
 					<div className="relative bg-[#252b3c] rounded-xl p-7 text-center space-y-5 mt-[40px]">
 						<img
 							src="/static-images/female-avatar.svg"
-							className="absolute top-o left-7"
+							className="absolute top-8 left-7"
 						/>
 						<img
 							src="/static-images/male-avatar.svg"
-							className="absolute bottom-0 right-7"
+							className="absolute bottom-3 right-7"
 						/>
-						<div className="max-w-[240px] mx-auto flex flex-col gap-5 items-center py-12">
+						<div className="max-w-[240px] mx-auto flex flex-col gap-5 items-center py-18 xs:py-12">
 							<h3 className="text-white font-normal">FEATURED</h3>
 							<p className="text-white text-sm">
 								Take part in challenges with friends or other

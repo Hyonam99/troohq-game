@@ -5,7 +5,7 @@ interface IGameModeProps {
 
 interface IPlayStepsProps {
 	title: string;
-	description: string;
+	description: string[];
 }
 
 export type { IGameModeProps, IPlayStepsProps };

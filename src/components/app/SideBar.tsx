@@ -10,10 +10,10 @@ const Sidebar = () => {
 	return (
 		<div
 			className={`bg-dark-blue h-screen overflow-y-scroll hide-scroll transition-all duration-300 hidden lg:block pr-[10px] ${
-				isCollapsed ? "w-20" : "w-[320px]"
+				isCollapsed ? "w-24" : "w-[328px]"
 			}`}
 		>
-			<div className={`relative p-4 border-r border-white/45`}>
+			<div className={`relative p-6 border-r border-white/45`}>
 				<div className="relative flex items-center justify-between mb-8">
 					<div className={isCollapsed ? "hidden" : "block"}>
 						<Logo />
@@ -22,7 +22,7 @@ const Sidebar = () => {
 						onClick={() => {
 							setIsCollapsed(!isCollapsed);
 						}}
-						className="absolute top-0 -right-[34px] !z-50 text-white hover:bg-sidebar-hover p-2 rounded-lg transition-all"
+						className="absolute top-0 -right-[42px] !z-50 text-white hover:bg-sidebar-hover p-2 rounded-lg transition-all cursor-pointer"
 					>
 						{isCollapsed ? (
 							<img
@@ -35,7 +35,7 @@ const Sidebar = () => {
 					</button>
 				</div>
 				<nav className="flex flex-col gap-4">
-					{menuItems.map((link) => (
+					{menuItems.map((link, i) => (
 						<NavLink
 							key={link.label}
 							to={link.linkUrl}
@@ -44,10 +44,10 @@ const Sidebar = () => {
 									isCollapsed
 										? "!h-[48px] w-[40px] justify-center !py-1 !px-2"
 										: ""
-								}`
+								} ${i === 5 ? "mb-8" : ""}`
 							}
 						>
-							<link.icon size={20} />
+							<img src={link.icon} alt={link.label}/>
 							{!isCollapsed && <span>{link.label}</span>}
 						</NavLink>
 					))}

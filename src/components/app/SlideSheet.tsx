@@ -3,6 +3,7 @@ import { RxCross2 } from "react-icons/rx";
 
 import Logo from "./Logo";
 import { menuItems } from "@/constants";
+import GameTrivia from "@components/game/GameTrivia";
 
 interface SideNavProps {
 	isOpen: boolean;
@@ -28,21 +29,24 @@ const SideSheet = (props: SideNavProps) => {
 					<Logo />
 					<RxCross2 size={24} color="#FFFFFF" onClick={onClose} />
 				</div>
-				{menuItems.map((link) => (
+				{menuItems.map((link, i) => (
 					<NavLink
 						key={link.label}
 						to={link.linkUrl}
 						className={({ isActive }) =>
-							`default-nav block w-full ${
+							`default-nav w-full ${
 								isActive ? "active-nav" : ""
-							}`
+							} ${i === 5 ? "mb-8" : ""}`
 						}
 					>
+						<img src={link.icon} alt={link.label} />
 						{link.label}
 					</NavLink>
 				))}
 
 				<button className="default-nav w-full mt-4">Logout</button>
+
+				<GameTrivia />
 			</div>
 
 			{isOpen && (
