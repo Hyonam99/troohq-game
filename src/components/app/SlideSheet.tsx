@@ -4,6 +4,7 @@ import { RxCross2 } from "react-icons/rx";
 import Logo from "./Logo";
 import { menuItems } from "@/constants";
 import GameTrivia from "@components/game/GameTrivia";
+import { RiLogoutCircleRLine } from "react-icons/ri";
 
 interface SideNavProps {
 	isOpen: boolean;
@@ -17,7 +18,7 @@ const SideSheet = (props: SideNavProps) => {
 		<section
 			className={`fixed top-0 left-0 h-[100vh] w-full transform ${
 				isOpen ? "translate-x-0" : "-translate-x-full"
-			} transition-transform duration-300 z-50`}
+			} transition-transform duration-300 z-50 pb-4`}
 		>
 			<div
 				className={
@@ -44,7 +45,7 @@ const SideSheet = (props: SideNavProps) => {
 					</NavLink>
 				))}
 
-				<button className="default-nav w-full mt-4">Logout</button>
+				<button className="default-nav w-full mt-4"><RiLogoutCircleRLine size={20} />Logout</button>
 
 				<GameTrivia />
 			</div>
