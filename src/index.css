@@ -1,14 +1,37 @@
 @import "tailwindcss";
 
+@config "../tailwind.config.js";
+
+@tailwind utilities;
+
+@layer base {
+	.btn-primary {
+		@apply bg-primary text-white px-6 py-3 rounded-2xl font-semibold hover:brightness-90 cursor-pointer;
+	}
+
+    .active-nav {
+        @apply !bg-primary/20 hover:bg-primary/20
+    }
+
+    .default-nav {
+        @apply bg-transparent text-white/55 py-4 px-5 rounded-xl flex items-center gap-4 text-sm hover:bg-primary/20 cursor-pointer
+    }
+    
+}
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
+  background: #060D1F;
+  color: white;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.hide-scroll {
+    scrollbar-width:none;
 }
